@@ -768,6 +768,110 @@ section.alt {
 .tier-dream .nine-cell p { color: rgba(255,255,255,0.75); }
 .tier-dream .cell-num { color: var(--accent); opacity: 0.7; }
 
+/* ===== Mandala (BNI 九宮格) ===== */
+.mandala {
+  max-width: 900px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+.mandala-cell {
+  padding: 22px 18px;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 150px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.mandala-cell:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow);
+  border-color: var(--accent);
+}
+.mandala-cell.center {
+  background: linear-gradient(135deg, var(--navy) 0%, var(--navy-dark) 100%);
+  color: white;
+  border: 2px solid var(--accent);
+  box-shadow: 0 12px 36px rgba(26,79,139,0.3);
+  position: relative;
+  z-index: 1;
+}
+.mandala-cell.center::before {
+  content: '';
+  position: absolute;
+  inset: -4px;
+  background: radial-gradient(circle, rgba(244,185,66,0.25) 0%, transparent 70%);
+  border-radius: calc(var(--radius) + 4px);
+  z-index: -1;
+}
+.mandala-cell.center:hover {
+  transform: none;
+  border-color: var(--accent);
+}
+.mandala-num {
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--accent-dark);
+  letter-spacing: 0.15em;
+  margin-bottom: 10px;
+}
+.mandala-label {
+  display: inline-block;
+  padding: 4px 12px;
+  background: var(--accent);
+  color: var(--navy-dark);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  border-radius: 100px;
+  margin-bottom: 10px;
+  align-self: center;
+}
+.mandala-cell b {
+  display: block;
+  font-size: 14px;
+  line-height: 1.45;
+  margin-bottom: 8px;
+  color: var(--ink);
+  font-weight: 700;
+}
+.mandala-cell.center b {
+  color: var(--accent);
+  font-size: 17px;
+  font-weight: 900;
+  line-height: 1.35;
+  margin-bottom: 12px;
+}
+.mandala-cell p {
+  font-size: 12px;
+  line-height: 1.55;
+  color: var(--ink-mute);
+  margin: 0;
+}
+.mandala-cell.center p {
+  color: rgba(255,255,255,0.88);
+  font-size: 12px;
+  line-height: 1.6;
+}
+@media (max-width: 768px) {
+  .mandala {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .mandala-cell.center {
+    grid-column: 1 / -1;
+  }
+}
+@media (max-width: 480px) {
+  .mandala { grid-template-columns: 1fr; }
+  .mandala-cell.center { grid-column: auto; }
+}
+
 /* ===== CTA ===== */
 .cta {
   background: var(--navy);
@@ -861,6 +965,7 @@ footer .divider { margin: 0 10px; color: rgba(255,255,255,0.3); }
       <a href="#customers">目標客戶</a>
       <a href="#circle">人脈圈</a>
       <a href="#referrals">三層引薦</a>
+      <a href="#mandala">九宮格</a>
     </div>
   </div>
 </nav>
@@ -1206,7 +1311,7 @@ footer .divider { margin: 0 10px; color: rgba(255,255,255,0.3); }
 <section id="referrals" class="alt">
   <div class="section-header">
     <div class="section-label">Three-Tier Referrals · 三層引薦</div>
-    <h2 class="section-title">我的理想引薦｜九宮格</h2>
+    <h2 class="section-title">我的三層引薦</h2>
     <p class="section-desc">
       BNI 三層引薦框架：<b>一般</b>（自己找得到）→ <b>理想</b>（粽子頭，一個節點帶一整串）→ <b>夢幻</b>（認識這人，三年後事業地位到位）
     </p>
@@ -1283,6 +1388,67 @@ footer .divider { margin: 0 10px; color: rgba(255,255,255,0.3); }
           <p>心元、GGV、中華開發、中信金 CVC 等級——Phase 2 SaaS 化的投資人＋ portfolio 轉介</p>
         </div>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== MANDALA (BNI 九宮格) ===== -->
+<section id="mandala">
+  <div class="section-header">
+    <div class="section-label">Mandala Chart · 九宮格</div>
+    <h2 class="section-title">我的目標九宮格</h2>
+    <p class="section-desc">
+      中心是我的目標，周圍 8 格是能把我帶到那裡的<b>專業別（power team）</b>。每一格都是一個「他有的客戶，剛好是我要的客戶」的合作節點。
+    </p>
+  </div>
+
+  <div class="mandala">
+    <div class="mandala-cell">
+      <div class="mandala-num">01</div>
+      <b>品牌策略顧問</b>
+      <p>他訂方向，客戶需要人把策略變 AI 系統</p>
+    </div>
+    <div class="mandala-cell">
+      <div class="mandala-num">02</div>
+      <b>行銷／廣告代理商</b>
+      <p>客戶投廣告後需要 CRM ＋ AI 自動化</p>
+    </div>
+    <div class="mandala-cell">
+      <div class="mandala-num">03</div>
+      <b>品牌／視覺設計公司</b>
+      <p>設計完後客戶需要營運系統</p>
+    </div>
+    <div class="mandala-cell">
+      <div class="mandala-num">04</div>
+      <b>會計師／稅務顧問</b>
+      <p>看得到客戶財務體質，知道誰有預算投資 AI</p>
+    </div>
+
+    <div class="mandala-cell center">
+      <div class="mandala-label">中心目標</div>
+      <b>「AI 商業流程架構師」<br>台灣代表人物</b>
+      <p>ASify AI 模組 SaaS 化<br>服務年營收數億傳產與台灣前 50 大品牌集團</p>
+    </div>
+
+    <div class="mandala-cell">
+      <div class="mandala-num">05</div>
+      <b>律師（企業顧問型）</b>
+      <p>企業轉型、組織調整的時機點</p>
+    </div>
+    <div class="mandala-cell">
+      <div class="mandala-num">06</div>
+      <b>人資顧問／企業教練</b>
+      <p>組織升級需求入口</p>
+    </div>
+    <div class="mandala-cell">
+      <div class="mandala-num">07</div>
+      <b>商會／產業協會理事長</b>
+      <p>粽子頭，批量接觸有預算的品牌主</p>
+    </div>
+    <div class="mandala-cell">
+      <div class="mandala-num">08</div>
+      <b>ERP／CRM 系統顧問、IT 整合商</b>
+      <p>大企業必裝系統，客戶進來後自然需要 AI 串接</p>
     </div>
   </div>
 </section>

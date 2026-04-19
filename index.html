@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Alice Tsai 蔡舜玉｜AI 落地師｜BNI 華榮 121 會員資料</title>
+<title>Alice Tsai 蔡舜玉｜AI 商業流程架構師｜BNI 華榮 121 會員資料</title>
 <meta name="description" content="誠玉股份有限公司執行長、ASify 品牌創辦人。9 套 AI agent 上線實戰。策略由你擬定，AI 怎麼落地交給我。" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -645,6 +645,129 @@ section.alt {
   margin-top: 3px;
 }
 
+/* ===== Nine-grid Referrals ===== */
+.nine-grid {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.nine-row {
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  gap: 20px;
+  align-items: stretch;
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+@media (max-width: 768px) {
+  .nine-row { grid-template-columns: 1fr; }
+}
+
+.row-badge {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  text-align: center;
+  border-radius: var(--radius);
+}
+.row-num {
+  font-size: 24px;
+  font-weight: 900;
+  letter-spacing: 0.1em;
+  line-height: 1;
+  margin-bottom: 6px;
+}
+.row-sub {
+  font-size: 12px;
+  letter-spacing: 0.06em;
+  opacity: 0.8;
+}
+
+.row-cells {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+@media (max-width: 768px) {
+  .row-cells { grid-template-columns: 1fr; }
+}
+
+.nine-cell {
+  padding: 20px;
+  border-radius: var(--radius);
+  border: 1px solid transparent;
+  position: relative;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.nine-cell:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow);
+}
+.cell-num {
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  margin-bottom: 8px;
+  opacity: 0.5;
+}
+.nine-cell b {
+  display: block;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.4;
+  margin-bottom: 8px;
+}
+.nine-cell p {
+  font-size: 13px;
+  line-height: 1.55;
+  margin: 0;
+}
+
+/* Tier: 一般 — 淺灰底 */
+.tier-general .row-badge {
+  background: #f1f3f5;
+  color: var(--ink-soft);
+}
+.tier-general .nine-cell {
+  background: white;
+  border-color: var(--line);
+  color: var(--ink);
+}
+.tier-general .nine-cell p { color: var(--ink-soft); }
+
+/* Tier: 理想 — 金色調 */
+.tier-ideal .row-badge {
+  background: linear-gradient(135deg, var(--accent) 0%, var(--accent-dark) 100%);
+  color: white;
+}
+.tier-ideal .nine-cell {
+  background: #fff8e7;
+  border-color: rgba(244,185,66,0.4);
+  color: var(--ink);
+}
+.tier-ideal .nine-cell b { color: var(--accent-dark); }
+.tier-ideal .nine-cell p { color: var(--ink-soft); }
+
+/* Tier: 夢幻 — 深藍 + 金 */
+.tier-dream .row-badge {
+  background: linear-gradient(135deg, var(--navy) 0%, var(--navy-dark) 100%);
+  color: var(--accent);
+  box-shadow: 0 4px 20px rgba(26,79,139,0.25);
+}
+.tier-dream .nine-cell {
+  background: linear-gradient(135deg, var(--navy-dark) 0%, #0d2a4d 100%);
+  border-color: rgba(244,185,66,0.25);
+  color: white;
+}
+.tier-dream .nine-cell b { color: var(--accent); }
+.tier-dream .nine-cell p { color: rgba(255,255,255,0.75); }
+.tier-dream .cell-num { color: var(--accent); opacity: 0.7; }
+
 /* ===== CTA ===== */
 .cta {
   background: var(--navy);
@@ -729,7 +852,7 @@ footer .divider { margin: 0 10px; color: rgba(255,255,255,0.3); }
 
 <nav class="nav">
   <div class="nav-inner">
-    <div class="nav-brand">Alice Tsai 蔡舜玉 <small>AI 落地師</small></div>
+    <div class="nav-brand">Alice Tsai 蔡舜玉 <small>AI 商業流程架構師</small></div>
     <div class="nav-links">
       <a href="#about">關於</a>
       <a href="#vision">願景</a>
@@ -737,6 +860,7 @@ footer .divider { margin: 0 10px; color: rgba(255,255,255,0.3); }
       <a href="#gains">GAINS</a>
       <a href="#customers">目標客戶</a>
       <a href="#circle">人脈圈</a>
+      <a href="#referrals">三層引薦</a>
     </div>
   </div>
 </nav>
@@ -747,7 +871,7 @@ footer .divider { margin: 0 10px; color: rgba(255,255,255,0.3); }
     <span class="hero-badge">BNI 華榮 · 121 會員資料表 · 2026.04</span>
     <h1>
       Alice Tsai 蔡舜玉
-      <span class="title-en">AI Implementation Consultant · AI 落地師</span>
+      <span class="title-en">AI Business Process Architect · AI 商業流程架構師</span>
     </h1>
     <p class="tagline">
       <b>策略由你擬定，AI 怎麼落地交給我。</b><br>
@@ -781,7 +905,7 @@ footer .divider { margin: 0 10px; color: rgba(255,255,255,0.3); }
     </div>
     <div class="info-item">
       <div class="label">職業</div>
-      <div class="value">AI 落地師</div>
+      <div class="value">AI 商業流程架構師</div>
     </div>
     <div class="info-item">
       <div class="label">地址</div>
@@ -822,7 +946,7 @@ footer .divider { margin: 0 10px; color: rgba(255,255,255,0.3); }
 <section id="vision" class="alt">
   <div class="section-header">
     <div class="section-label">My Mission · 強烈願望</div>
-    <h2 class="section-title">為什麼我做 AI 落地師</h2>
+    <h2 class="section-title">為什麼我做 AI 商業流程架構師</h2>
   </div>
 
   <div class="vision">
@@ -847,7 +971,7 @@ footer .divider { margin: 0 10px; color: rgba(255,255,255,0.3); }
       <h3>我成功的關鍵</h3>
       <p>
         ASify 有世界級品質，我做人有真誠。把「如何讓產業鏈中的每個人都獲益」當作思考起點。<br><br>
-        換到 AI 落地師的角色——我不賣 AI 模型，我賣的是<b>「如何把 AI 用對地方」的判斷力</b>。不抱成見、持續學習、遇錯快速修改，這是 AI 時代最重要的工作方法。
+        換到 AI 商業流程架構師的角色——我不賣 AI 模型，我賣的是<b>「如何把 AI 架構到對的地方」的判斷力</b>。不抱成見、持續學習、遇錯快速修改，這是 AI 時代最重要的工作方法。
       </p>
     </div>
   </div>
@@ -859,7 +983,7 @@ footer .divider { margin: 0 10px; color: rgba(255,255,255,0.3); }
     <div class="section-label">Where I Fit · 我的位置</div>
     <h2 class="section-title">我做的 / 我不做的</h2>
     <p class="section-desc">
-      AI 落地師是工程與落地的角色。策略、法務、財務、補助都有比我更專業的夥伴，我會把客戶引薦過去。
+      AI 商業流程架構師是設計與建置的角色。策略、法務、財務、補助都有比我更專業的夥伴，我會把客戶引薦過去。
     </p>
   </div>
 
@@ -912,7 +1036,7 @@ footer .divider { margin: 0 10px; color: rgba(255,255,255,0.3); }
       <div class="gain-letter">G · GOALS</div>
       <div class="gain-title">目標</div>
       <ol>
-        <li><b>AI 落地顧問服務產品化。</b>年服務 10–15 家品牌主，提供 AI 導入評估、系統建置、工作流設計。</li>
+        <li><b>AI 商業流程建置服務產品化。</b>年服務 10–15 家品牌主，提供 AI 導入評估、系統建置、工作流設計。</li>
         <li><b>ASify AI 模組對外輸出。</b>把內部 9 套 agent 架構拆解成可授權／可部署的產品線。</li>
         <li><b>建立 AI 落地方法論。</b>讓品牌的策略能變成 AI 每天執行的系統，不再只是投影片。</li>
       </ol>
@@ -975,7 +1099,7 @@ footer .divider { margin: 0 10px; color: rgba(255,255,255,0.3); }
     <div class="section-label">Target Customers · 目標客戶</div>
     <h2 class="section-title">我的理想客戶類型</h2>
     <p class="section-desc">
-      以下是 AI 落地顧問服務的 10 種目標客戶畫像。如果你身邊有這類品牌主，歡迎引薦。
+      以下是 AI 商業流程建置服務的 10 種目標客戶畫像。如果你身邊有這類品牌主，歡迎引薦。
     </p>
   </div>
 
@@ -1037,7 +1161,7 @@ footer .divider { margin: 0 10px; color: rgba(255,255,255,0.3); }
     <div class="section-label">Business Networking Circle · 業務人脈圈</div>
     <h2 class="section-title">互相支持、增強共生的行業</h2>
     <p class="section-desc">
-      這些行業跟 AI 落地師有某種聯繫但不具競爭性，能互相轉介客戶、共同服務品牌主。
+      這些行業跟 AI 商業流程架構師有某種聯繫但不具競爭性，能互相轉介客戶、共同服務品牌主。
     </p>
   </div>
 
@@ -1074,6 +1198,91 @@ footer .divider { margin: 0 10px; color: rgba(255,255,255,0.3); }
           <small>年營收千萬以上、對品質敏感的目標客群</small>
         </li>
       </ol>
+    </div>
+  </div>
+</section>
+
+<!-- ===== THREE-TIER REFERRALS ===== -->
+<section id="referrals" class="alt">
+  <div class="section-header">
+    <div class="section-label">Three-Tier Referrals · 三層引薦</div>
+    <h2 class="section-title">我的理想引薦｜九宮格</h2>
+    <p class="section-desc">
+      BNI 三層引薦框架：<b>一般</b>（自己找得到）→ <b>理想</b>（粽子頭，一個節點帶一整串）→ <b>夢幻</b>（認識這人，三年後事業地位到位）
+    </p>
+  </div>
+
+  <div class="nine-grid">
+    <div class="nine-row tier-general">
+      <div class="row-badge">
+        <div class="row-num">一般</div>
+        <div class="row-sub">自己找得到</div>
+      </div>
+      <div class="row-cells">
+        <div class="nine-cell">
+          <div class="cell-num">01</div>
+          <b>月預算 5 萬+ 的品牌主</b>
+          <p>對 AI 開放、有真實營運痛點</p>
+        </div>
+        <div class="nine-cell">
+          <div class="cell-num">02</div>
+          <b>年營收千萬級電商老闆</b>
+          <p>已有規模，想擴展營運效率</p>
+        </div>
+        <div class="nine-cell">
+          <div class="cell-num">03</div>
+          <b>遇到 AI 瓶頸的中型公司</b>
+          <p>想導入但不知從何開始</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="nine-row tier-ideal">
+      <div class="row-badge">
+        <div class="row-num">理想</div>
+        <div class="row-sub">粽子頭</div>
+      </div>
+      <div class="row-cells">
+        <div class="nine-cell">
+          <div class="cell-num">04</div>
+          <b>品牌／行銷顧問公司老闆</b>
+          <p>旗下 N 個客戶都需要 AI 落地</p>
+        </div>
+        <div class="nine-cell">
+          <div class="cell-num">05</div>
+          <b>產業協會／商會理事長</b>
+          <p>會員就是潛客群</p>
+        </div>
+        <div class="nine-cell">
+          <div class="cell-num">06</div>
+          <b>集團總經理（多品牌）</b>
+          <p>一人拍板，旗下多品牌同時導入</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="nine-row tier-dream">
+      <div class="row-badge">
+        <div class="row-num">夢幻</div>
+        <div class="row-sub">三年事業地位</div>
+      </div>
+      <div class="row-cells">
+        <div class="nine-cell">
+          <div class="cell-num">07</div>
+          <b>前 20 大集團 CIO／數位長</b>
+          <p>統一、全聯、遠傳、國泰這個 level——年度千萬級 AI 轉型採購決策者</p>
+        </div>
+        <div class="nine-cell">
+          <div class="cell-num">08</div>
+          <b>Anthropic／Google／Microsoft 亞太 GM</b>
+          <p>官方合作夥伴認證、大客戶轉介通路、跨國市場打開</p>
+        </div>
+        <div class="nine-cell">
+          <div class="cell-num">09</div>
+          <b>頂級 VC／CVC 合夥人</b>
+          <p>心元、GGV、中華開發、中信金 CVC 等級——Phase 2 SaaS 化的投資人＋ portfolio 轉介</p>
+        </div>
+      </div>
     </div>
   </div>
 </section>

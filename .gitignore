@@ -1,0 +1,10 @@
+# Local Claude Code state
+.pending-changes.md
+.claude-state/
+
+# macOS
+.DS_Store
+
+# Editor
+.vscode/
+.idea/

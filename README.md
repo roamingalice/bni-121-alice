@@ -24,7 +24,7 @@ gh repo create bni-121-alice --public --source=. --push
 # GitHub → Settings → Pages → Source: main / root
 ```
 
-網址：`https://<username>.github.io/bni-121-alice/`
+網址：https://roamingalice.github.io/bni-121-alice/
 
 ## 內容結構
 

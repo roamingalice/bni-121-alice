@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BNI Connect 推薦人報告查詢教學</title>
+<style>
+  :root {
+    --bni-red: #c8102e;
+    --bni-red-dark: #9b0c24;
+    --ink: #1a1a1a;
+    --ink-soft: #4a4a4a;
+    --ink-mute: #888;
+    --paper: #fafaf7;
+    --card: #ffffff;
+    --border: #e8e6e0;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "PingFang TC", "Helvetica Neue", "Microsoft JhengHei", sans-serif;
+    background: var(--paper);
+    color: var(--ink);
+    line-height: 1.6;
+  }
+  header {
+    max-width: 880px;
+    margin: 0 auto;
+    padding: 56px 24px 32px;
+  }
+  header .eyebrow {
+    color: var(--bni-red);
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin: 0 0 12px;
+  }
+  header h1 {
+    font-size: 32px;
+    font-weight: 700;
+    margin: 0 0 16px;
+    letter-spacing: -0.01em;
+  }
+  header .lede {
+    color: var(--ink-soft);
+    font-size: 16px;
+    margin: 0;
+    max-width: 640px;
+  }
+  main {
+    max-width: 880px;
+    margin: 0 auto;
+    padding: 16px 24px 80px;
+  }
+  .step {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 28px;
+    margin-bottom: 24px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.02);
+  }
+  .step-head {
+    display: flex;
+    align-items: baseline;
+    gap: 14px;
+    margin-bottom: 16px;
+  }
+  .step-num {
+    flex: none;
+    background: var(--bni-red);
+    color: #fff;
+    font-weight: 700;
+    font-size: 14px;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+  }
+  .step h2 {
+    font-size: 20px;
+    font-weight: 600;
+    margin: 0;
+    letter-spacing: -0.005em;
+  }
+  .step .body {
+    color: var(--ink-soft);
+    font-size: 15px;
+    margin: 0 0 20px;
+  }
+  .step .body strong {
+    color: var(--ink);
+    background: #fff5d6;
+    padding: 1px 4px;
+    border-radius: 3px;
+    font-weight: 600;
+  }
+  .step figure {
+    margin: 0;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    overflow: hidden;
+    background: #f5f5f0;
+  }
+  .step img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  .step figcaption {
+    font-size: 13px;
+    color: var(--ink-mute);
+    padding: 10px 14px;
+    border-top: 1px solid var(--border);
+    background: #fcfcfa;
+  }
+  .tip {
+    margin-top: 16px;
+    padding: 12px 16px;
+    background: #fff8e8;
+    border-left: 3px solid #e8b923;
+    border-radius: 0 6px 6px 0;
+    font-size: 14px;
+    color: var(--ink-soft);
+  }
+  .tip-label {
+    font-weight: 600;
+    color: #8a6500;
+    margin-right: 6px;
+  }
+  footer {
+    max-width: 880px;
+    margin: 0 auto;
+    padding: 24px;
+    color: var(--ink-mute);
+    font-size: 13px;
+    border-top: 1px solid var(--border);
+  }
+  @media (max-width: 600px) {
+    header { padding: 32px 16px 16px; }
+    header h1 { font-size: 24px; }
+    main { padding: 8px 16px 48px; }
+    .step { padding: 20px; border-radius: 10px; }
+  }
+</style>
+</head>
+<body>
+<header>
+  <p class="eyebrow">BNI Connect 操作教學</p>
+  <h1>六步驟查詢「會員推薦多少人」</h1>
+  <p class="lede">看看分會有多少金質、準金質。</p>
+</header>
+
+<main>
+
+  <section class="step">
+    <div class="step-head">
+      <span class="step-num">1</span>
+      <h2>從首頁打開左側「報告」選單</h2>
+    </div>
+    <p class="body">登入後預設停在「我的 BNI® 商務」儀表板。把滑鼠移到左側功能列第 4 個圖示，會浮出小選單，選 <strong>報告</strong>。</p>
+    <figure>
+      <img src="steps/step1_home.jpg" alt="My BNI 商務首頁,左側 sidebar 浮出報告/分會選單">
+      <figcaption>「我的 BNI® 商務」首頁,左側 sidebar 滑鼠 hover 後浮出「報告 / 分會」二選一</figcaption>
+    </figure>
+  </section>
+
+  <section class="step">
+    <div class="step-head">
+      <span class="step-num">2</span>
+      <h2>進入「報告」頁,預設停在 PALMS 概要報告</h2>
+    </div>
+    <p class="body">頁面載入後,左側清單會自動選中第一項「PALMS概要報告」。先別急著按開始,我們要的是清單裡更下面的<strong>推薦人報告</strong>。</p>
+    <figure>
+      <img src="steps/step2_reports_default.jpg" alt="報告頁載入,預設選中 PALMS概要報告">
+      <figcaption>左側分會報告清單,紅色標籤「斷的」代表新版斷頁式報告</figcaption>
+    </figure>
+  </section>
+
+  <section class="step">
+    <div class="step-head">
+      <span class="step-num">3</span>
+      <h2>清單往下滑,點選「推薦人報告」</h2>
+    </div>
+    <p class="body">在左側清單往下捲,在「副報告」下面找到 <strong>推薦人報告</strong> 並點選。被選中的項目會變成紅底白字。</p>
+    <figure>
+      <img src="steps/step3_pick_referral.jpg" alt="清單往下捲,滑鼠停在推薦人報告上">
+      <figcaption>推薦人報告位於缺席報告、副報告之後,PALMS 出席報告之前</figcaption>
+    </figure>
+    <div class="tip">
+      <span class="tip-label">小提示</span>清單上方有搜尋框,直接輸入「推薦」也能快速過濾。
+    </div>
+  </section>
+
+  <section class="step">
+    <div class="step-head">
+      <span class="step-num">4</span>
+      <h2>設定查詢區間與報告類型</h2>
+    </div>
+    <p class="body">右側會顯示三個必填欄位:<strong>開始日期</strong>、<strong>結束日期</strong>、<strong>報告類型</strong>。範例設成 2021/05/15 到 2026/05/15(五年區間),報告類型選 <strong>螢幕視圖</strong>(直接在頁面上看,不用下載)。確認後按紅色「開始」。</p>
+    <figure>
+      <img src="steps/step4_set_filters.jpg" alt="日期填 15/05/2021 到 15/05/2026,選螢幕視圖,準備按開始">
+      <figcaption>三種輸出方式:螢幕視圖(快速預覽)、Excel(可再加工)、PDF(歸檔列印)</figcaption>
+    </figure>
+    <div class="tip">
+      <span class="tip-label">小提示</span>日期格式是 DD/MM/YYYY(日/月/年),不是台灣常用的 YYYY/MM/DD,別填錯。
+    </div>
+  </section>
+
+  <section class="step">
+    <div class="step-head">
+      <span class="step-num">5</span>
+      <h2>等待 BNI 動畫跑完</h2>
+    </div>
+    <p class="body">按下開始後會跳出 modal 視窗,中間是 BNI logo 載入動畫。資料量大的分會、長區間查詢會跑久一點(通常 5–15 秒)。</p>
+    <figure>
+      <img src="steps/step5_loading.jpg" alt="modal 視窗中央顯示 BNI logo loading 動畫">
+      <figcaption>底下「關閉」按鈕在資料還沒回來前可隨時取消</figcaption>
+    </figure>
+  </section>
+
+  <section class="step">
+    <div class="step-head">
+      <span class="step-num">6</span>
+      <h2>結果頁:推薦人 × 被推薦人 × 申請日期</h2>
+    </div>
+    <p class="body">表格欄位包含:<strong>推薦人姓名</strong>、<strong>會員推薦總數</strong>、<strong>被推薦人姓名</strong>、被推薦地區、被推薦分會、<strong>申請日期</strong>。同一位推薦人若有多筆推薦,會員推薦總數欄會合併顯示總數。右上角「匯出」可另存 Excel,「無模題匯出」是無表頭版本。看完按下方「關閉」回到查詢頁。</p>
+    <figure>
+      <img src="steps/step6_result.jpg" alt="推薦人報告結果表格,顯示華醫分會的推薦明細">
+      <figcaption>頂部 metadata 顯示營運使用者、營運時間、查詢條件,方便事後追溯</figcaption>
+    </figure>
+    <div class="tip">
+      <span class="tip-label">小提示</span>表頭的「按姓氏排序」「按名字排序」可切換排序;欄位名(底線)點下去可換排序鍵。
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <p style="margin: 0 0 6px;">感謝華醫分會主席林子雯提供錄影影片</p>
+  <p style="margin: 0;">製作人：華榮分會主席 蔡舜玉 Alice</p>
+</footer>
+
+</body>
+</html>
